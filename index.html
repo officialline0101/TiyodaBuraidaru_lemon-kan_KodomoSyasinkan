@@ -17,7 +17,7 @@
             /* 画面中央に固定 */
             transform: translateY(-50%) translateX(20px);
             /* 中央配置と右ずらし */
-            background: #e95bbb;
+            background: #f7c11e;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -104,7 +104,7 @@
         }
 
         h1 {
-            background: linear-gradient(135deg, #e95bbb, #aa3886);
+            background: linear-gradient(135deg, #f7c11e, #c49710);
             color: white;
             padding: 20px;
             border-radius: 0 15px 0px 45px;
@@ -123,7 +123,7 @@
             margin-bottom: 10px;
             padding: 3px;
             font-weight: 600;
-            background-color: #e95bbb;
+            background-color: #f7c11e;
             color: white;
             border-radius: 6px;
             font-size: 18px;
@@ -140,7 +140,7 @@
             margin-bottom: 10px;
             padding: 3px;
             font-weight: 600;
-            background-color: #e95bbb;
+            background-color: #f7c11e;
             color: white;
             border-radius: 6px;
             font-size: 18px;
@@ -164,12 +164,12 @@
             align-items: center;
             justify-content: center;
             background: white;
-            color: #e95bbb;
+            color: #f7c11e;
             font-weight: bold;
             font-size: 0.9em;
             border-radius: 4px;
             padding: 2px 6px;
-            border: 2px solid #e95bbb;
+            border: 2px solid #f7c11e;
         }
 
         input[type="text"],
@@ -305,7 +305,7 @@
         }
 
         .calendar td.selected {
-            background-color: #e95bbb;
+            background-color: #f7c11e;
             color: #fff;
         }
 
@@ -525,7 +525,7 @@
 
         .highlight-background {
             cursor: pointer;
-            background-color: #e95bbb;
+            background-color: #f7c11e;
             padding: 10px;
             border-radius: 6px;
             font-size: 18px;
@@ -613,11 +613,11 @@
             width: 100%;
             padding: 15px;
             font-size: 18px;
-            background-color: #06c755;
+            background-color: #e95bbb;
         }
 
         .submit-button:hover {
-            background-color: #06c755;
+            background-color: #e95bbb;
         }
 
         @media (max-width: 768px) {
@@ -666,7 +666,7 @@
             left: 50%;
             transform: translate(-50%, -10px);
             /* Y方向に上げる */
-            background-color: #13ca5e;
+            background-color: #e95bbb;
             color: #fff;
             padding: 3px 12px;
             /* ボックスのパディングを縮小 */
@@ -774,11 +774,17 @@
 
         <div class="label">希望メニュー</div>
         <div class="hope-buttons">
-            <button type="button" id="onehope" onclick="selecthope(this)">成人振袖</button>
-            <button type="button" id="twohope" onclick="selecthope(this)">成人写真</button>
-            <button type="button" id="threehope" onclick="selecthope(this)">卒業袴</button>
-            <button type="button" id="fourhope" onclick="selecthope(this)">男性袴</button>
-            <button type="button" id="fivehope" onclick="selecthope(this)">生年祝い</button>
+            <button type="button" id="onehope" onclick="selecthope(this)">マタニティ</button>
+            <button type="button" id="twohope" onclick="selecthope(this)">ニューボーン</button>
+            <button type="button" id="threehope" onclick="selecthope(this)">百日</button>
+            <button type="button" id="fourhope" onclick="selecthope(this)">ハーフバースデー</button>
+            <button type="button" id="fivehope" onclick="selecthope(this)">1歳記念</button>
+            <button type="button" id="sixhope" onclick="selecthope(this)">七五三</button>
+            <button type="button" id="sevenhope" onclick="selecthope(this)">入学記念</button>
+            <button type="button" id="eighthope" onclick="selecthope(this)">十三祝い</button>
+            <button type="button" id="ninehope" onclick="selecthope(this)">生年祝い</button>
+            <button type="button" id="tenhope" onclick="selecthope(this)">家族写真</button>
+            <button type="button" id="elevenhope" onclick="selecthope(this)">その他記念</button>
         </div>
 
         <div class="highlight-background">
@@ -805,9 +811,9 @@
 
         <div class="label">希望店舗<span class="required">必須</span></div>
         <div class="store-buttons">
-            <button type="button" id="onestore" onclick="selectstore(this)">那覇西町店</button>
+            <button type="button" id="onestore" onclick="selectstore(this)">那覇店</button>
             <button type="button" id="twostore" onclick="selectstore(this)">西原店</button>
-            <button type="button" id="threestore" onclick="selectstore(this)">北谷店</button>
+            <button type="button" id="threestore" onclick="selectstore(this)">ハンビー店</button>
             <button type="button" id="fourstore" onclick="selectstore(this)">うるま店</button>
             <button type="button" id="fivestore" onclick="selectstore(this)">名護店</button>
         </div>
@@ -841,7 +847,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             liff.init({
-                liffId: '2005254357-zKma9BZk'
+                liffId: '2007207108-V1loJAJx'
             }).then(() => {
                 console.log('LIFF初期化成功');
             }).catch((err) => {
@@ -1196,6 +1202,12 @@
             document.getElementById('threehope').classList.remove('active');
             document.getElementById('fourhope').classList.remove('active');
             document.getElementById('fivehope').classList.remove('active');
+            document.getElementById('sixhope').classList.remove('active');
+            document.getElementById('sevenhope').classList.remove('active');
+            document.getElementById('eighthope').classList.remove('active');
+            document.getElementById('ninehope').classList.remove('active');
+            document.getElementById('tenhope').classList.remove('active');
+            document.getElementById('elevenhope').classList.remove('active');
             element.classList.add('active');
             hopeCount = element.innerText;
 
@@ -1346,7 +1358,7 @@
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\nお名前：${formData.name}\n\n性別：${formData.visitCount}\n\nご年齢：${formData.age}\n\nお問い合わせ内容：${formData.inquiry}\n\n希望メニュー：${formData.hopeCount}\n\n【希望日時】\n・第一希望日\n${formatDate(formData.dates[0])}\n\n・第二希望日\n${formatDate(formData.dates[1])}\n\nお名前：${formData.storeCount}\n\nお名前：${formData.phone}\n\nメッセージ：${formData.message}`
+                text: `【千代田振袖館予約フォーム】\nお名前：${formData.name}\n\n性別：${formData.visitCount}\n\nご年齢：${formData.age}\n\nお問い合わせ内容：${formData.inquiry}\n\n希望メニュー：${formData.hopeCount}\n\n【希望日時】\n・第一希望日\n${formatDate(formData.dates[0])}\n\n・第二希望日\n${formatDate(formData.dates[1])}\n\nお名前：${formData.storeCount}\n\nお名前：${formData.phone}\n\nメッセージ：${formData.message}`
             }]).then(() => {
                 alert('当日キャンセルは無いようにお願いいたします。');
                 liff.closeWindow();
