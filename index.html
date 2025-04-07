@@ -1358,7 +1358,7 @@
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【れもん館予約フォーム】\nお名前：${formData.name}\n\n性別：${formData.visitCount}\n\nご年齢：${formData.age}\n\nお問い合わせ内容：${formData.inquiry}\n\n希望メニュー：${formData.hopeCount}\n\n【希望日時】\n・第一希望日\n${formatDate(formData.dates[0])}\n\n・第二希望日\n${formatDate(formData.dates[1])}\n\nお名前：${formData.storeCount}\n\nお名前：${formData.phone}\n\nメッセージ：${formData.message}`
+                text: `【れもん館予約フォーム】\nお名前：${formData.name}\n\n性別：${formData.visitCount}\n\nご年齢：${formData.age}\n\nお問い合わせ内容：${formData.inquiry}\n\n希望メニュー：${formData.hopeCount}\n\n【希望日時】\n・第一希望日\n${formatDate(formData.dates[0])}\n\n・第二希望日\n${formatDate(formData.dates[1])}\n\nお名前：${formData.storeCount}\n\n電話番号：${formData.phone}\n\nメッセージ：${formData.message}`
             }]).then(() => {
                 alert('当日キャンセルは無いようにお願いいたします。');
                 liff.closeWindow();
